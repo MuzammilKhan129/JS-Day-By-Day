@@ -1,0 +1,16 @@
+#box{
+    height: 200px;
+    margin: 10px;
+    width: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+.para{
+    font-size: 34;
+    color: aqua;
+}
+
+.newClass{
+    background-color: brown;
+}
