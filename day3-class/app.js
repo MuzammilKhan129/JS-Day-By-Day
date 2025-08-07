@@ -29,6 +29,11 @@ ali4.__proto__ = employee;
 
 
 class ToyotaCar{
+    constructor(brand, mileage){
+        
+            this.brand = brand;
+            this.mileage = mileage;
+    }
     start(){
         console.log("start");
     }
@@ -36,51 +41,103 @@ class ToyotaCar{
         console.log("stop");        
     }
     setBrand(brand){
-        this.brandName = brand;
+        this.brand = brand;
     }
 }
 
 
-let fortuner = new ToyotaCar;
-fortuner.setBrand("Toyota");
-let lexus = new ToyotaCar;
+let fortuner = new ToyotaCar("Toyota", 28);
+
+let lexus = new ToyotaCar("Toyota", 67);
 
 
 
+class Parent{
+    hello(){
+        console.log("hello");
+    }
+}
+
+class Child extends Parent{
+
+}
 
 
 
+let obj = new Child;
 
 
 
+class Person{
+    constructor(name){
+        this.species = "homo sapiens";
+        this.name = name;
+    }
+    eat(){
+        console.log("eat");
+    }
+    sleep(){
+        console.log("sleep");
+    }
+    work(){
+        console.log("Do Nothing");
+    }
+}
+
+
+class Engineer extends Person{
+    constructor(branch){
+        
+        super();
+        this.branch = branch;
+        
+    }
+    work(){
+        console.log("solve problems, build something");
+    }
+}
+
+class Doctor extends Person{
+    constructor(name){
+        super(name);
+        
+    }
+    work(){
+        super.eat();
+        console.log("Treat Patient");
+    }
+}
+
+let enjObj = new Engineer("chemical");
+let umar = new Doctor("jutt");
+
+
+let DATA = "Secret Information" 
+class User{
+    constructor(name,email){
+        this.name = name;
+        this.email = email;
+    }
+    viewData(){
+        console.log("data = ", DATA);
+    }
+    
+}
+
+class Admin extends User{
+    constructor(name, email){
+        super(name, email);
+    }
+    editData(){
+        DATA = "new data";
+    }
+}
 
 
 
+let student = new User("moni", "uboy29129@gmail.com");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let admin1 = new Admin("admin1", "admin1@gmail.com")
 
 
 
