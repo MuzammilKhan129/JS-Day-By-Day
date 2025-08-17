@@ -10,7 +10,7 @@ const condition = document.getElementById("condition");
 
 let isCelsius = true;
 
-// Local images for background
+
 const weatherBackgrounds = {
     sunny: "images/sunny.jpg",
     cloudy: "images/cloudy.jpg",
@@ -39,7 +39,7 @@ function displayWeather(city, weather) {
     humidity.textContent = `Wind Speed: ${weather.current_weather.windspeed} km/h`;
     condition.textContent = `Condition Code: ${weather.current_weather.weathercode}`;
 
-    // Weather icons (manual selection)
+    
     if (weather.current_weather.temperature > 25) {
         weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png"; // Sunny
         document.body.style.backgroundImage = `url(${weatherBackgrounds.sunny})`;
@@ -55,7 +55,7 @@ function displayWeather(city, weather) {
     }
 }
 
-// Search by city
+
 cityForm.addEventListener("submit", async e => {
     e.preventDefault();
     try {
@@ -69,7 +69,7 @@ cityForm.addEventListener("submit", async e => {
     }
 });
 
-// Toggle Celsius ↔ Fahrenheit
+
 unitCheckbox.addEventListener("change", async () => {
     isCelsius = !isCelsius;
     if (cityName.textContent) {
@@ -79,7 +79,7 @@ unitCheckbox.addEventListener("change", async () => {
     }
 });
 
-// Auto-detect location
+
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
         async pos => {
