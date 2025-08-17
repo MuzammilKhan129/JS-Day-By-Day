@@ -41,16 +41,16 @@ function displayWeather(city, weather) {
 
     
     if (weather.current_weather.temperature > 25) {
-        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png"; // Sunny
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png"; 
         document.body.style.backgroundImage = `url(${weatherBackgrounds.sunny})`;
     } else if (weather.current_weather.temperature > 15) {
-        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/414/414825.png"; // Cloudy
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/414/414825.png"; 
         document.body.style.backgroundImage = `url(${weatherBackgrounds.cloudy})`;
     } else if (weather.current_weather.temperature > 5) {
-        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/1163/1163657.png"; // Rainy
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/1163/1163657.png"; 
         document.body.style.backgroundImage = `url(${weatherBackgrounds.rainy})`;
     } else {
-        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/642/642102.png"; // Snowy
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/642/642102.png"; 
         document.body.style.backgroundImage = `url(${weatherBackgrounds.snowy})`;
     }
 }
